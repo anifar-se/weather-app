@@ -1,0 +1,29 @@
+{
+    "name": "weather-app",
+    "description": "A weather application built with Laravel as the backend and Next.js as the frontend.",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "php artisan package:discover --ansi"
+        ],
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
